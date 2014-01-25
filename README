@@ -1,0 +1,7 @@
+A DHCP client exit hook for automatically creating tun6to4 interface with 6to4
+whenever DHCP IP changes.
+
+Tested with isc-dhcp-client on Debian Wheezy.
+
+For more information see https://wiki.debian.org/DebianIPv6
+
