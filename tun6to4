@@ -22,9 +22,11 @@ function stop() {
 	ip tunnel del tun6to4
 }
 
-if [ -n "$new_ip_address" ] && [ "$old_ip_address" != "$new_ip_address" ]; then
-	stop
-	start
+if [ -n "$new_ip_address" ]; then
+	if [ "$old_ip_address" != "$new_ip_address" ]; then
+		stop
+		start
+	fi
 else
 	stop
 fi
